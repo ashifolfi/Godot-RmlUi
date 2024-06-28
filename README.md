@@ -5,7 +5,7 @@ A GDExtension port of RmlUi to Godot 4.2+
 - Basic rendering on Canvas layers
 - Integration with Godot Filesystem
 - Texture support via Godot Texture Resource
-- Mouse Input
+- Full input via `_gui_input`
 - Event binding in GDScript
 - Inline GDScript in RML files
 - Support for translating strings using Godot's Translation System
@@ -13,7 +13,6 @@ A GDExtension port of RmlUi to Godot 4.2+
 **ToDo:**
 - GDScript Element Modification
 - Integration with Godot Font System
-- Keyboard Input
 - Editor Document rendering and modification
 
 ## Screenshots

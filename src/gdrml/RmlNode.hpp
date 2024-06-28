@@ -8,10 +8,6 @@
 #include <godot_cpp/classes/control.hpp>
 #include <godot_cpp/godot.hpp>
 #include <godot_cpp/classes/input_event.hpp>
-#include <godot_cpp/classes/input_event_key.hpp>
-#include <godot_cpp/classes/input_event_mouse.hpp>
-#include <godot_cpp/classes/input_event_mouse_motion.hpp>
-#include <godot_cpp/classes/input_event_mouse_button.hpp>
 
 using namespace godot;
 
@@ -45,9 +41,9 @@ public:
 	void _ready() override;
 	void _enter_tree() override;
 	void _exit_tree() override;
-	void _input(const Ref<InputEvent>& event) override;
 	void _process(double deltaTime) override;
 	void _draw() override;
+	void _gui_input(const Ref<InputEvent>& event) override;
 
 private:
 	String m_DocumentPath;
