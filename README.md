@@ -1,6 +1,8 @@
 # Godot RmlUi
 A GDExtension port of RmlUi to Godot 4.2+
 
+
+
 **Current Progress:**
 - Basic rendering on Canvas layers
 - Integration with Godot Filesystem
@@ -21,4 +23,27 @@ A GDExtension port of RmlUi to Godot 4.2+
 ![](.github/screenshots/2ddemo.png)
 
 ## Build Instructions
+
+### Prerequisites
+- CMake 3.25+
+- vcpkg
+- Godot 4.2+
+- git
+
+### Windows
+
+#### Visual Studio
+- Clone the project and its submodules
+- Open the directory as a CMake project within Visual Studio
+- Build `godrml.dll`
+
+That is all.
+
+#### CLion
+TODO
+
+### macOS
+TODO
+
+### Linux
 TODO
