@@ -8,6 +8,7 @@ A GDExtension port of RmlUi to Godot 4.2+
 - Mouse Input
 - Event binding in GDScript
 - Inline GDScript in RML files
+- Support for translating strings using Godot's Translation System
 
 **ToDo:**
 - GDScript Element Modification
