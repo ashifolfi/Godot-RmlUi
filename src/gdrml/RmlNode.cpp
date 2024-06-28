@@ -92,7 +92,8 @@ void RmlNode::_enter_tree()
 
 void RmlNode::_exit_tree()
 {
-	m_Document->Close();
+	if (m_Document)
+		m_Document->Close();
 }
 
 void RmlNode::_input(const Ref<InputEvent>& event)
