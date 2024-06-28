@@ -16,7 +16,8 @@ GDSystemInterface::GDSystemInterface()
 
 double GDSystemInterface::GetElapsedTime()
 {
-    return static_cast<double>(Time::get_singleton()->get_ticks_msec());
+    // oops this is seconds
+    return static_cast<double>(Time::get_singleton()->get_ticks_msec()) / 1000.0;
 }
 
 bool GDSystemInterface::LogMessage(Rml::Log::Type type, const Rml::String& message)

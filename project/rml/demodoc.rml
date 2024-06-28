@@ -7,5 +7,6 @@
 		<h1>RMLUI_NAME</h1>
 		<p>HELLO_WORLD</p>
 		<p>QBF_LINE</p>
+		<input type="text"></input>
 	</body>
 </rml>
