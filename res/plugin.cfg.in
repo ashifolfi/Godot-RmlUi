@@ -1,0 +1,7 @@
+[plugin]
+
+name="Godot RMLUI"
+description="Godot RMLUI Support"
+author="eden"
+version="${PROJECT_VERSION}"
+script="gdrml.gd"

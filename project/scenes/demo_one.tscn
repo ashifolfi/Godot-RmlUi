@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4slxhsabt4p7"]
+
+[ext_resource type="Texture2D" uid="uid://cftr2gd7ghw4f" path="res://icon.svg" id="1_qgj8e"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(196, 158)
+texture = ExtResource("1_qgj8e")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 65.0
+offset_right = 215.0
+offset_bottom = 88.0
+text = "This is a sprite2d 👇"
+
+[node name="RmlNode" type="RmlNode" parent="."]
+m_DocumentPath = "res://rml/demodoc.rml"
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

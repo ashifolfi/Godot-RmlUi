@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcn5iwx33txbk"]
+
+[ext_resource type="PackedScene" uid="uid://cfgswi0046lfw" path="res://addons/gdrml/editors/RmlDocViewport.tscn" id="1_47toy"]
+
+[node name="VSplitContainer" type="VSplitContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+dragger_visibility = 2
+
+[node name="MenuBar" type="MenuBar" parent="."]
+layout_mode = 2
+
+[node name="File" type="PopupMenu" parent="MenuBar"]
+size = Vector2i(155, 100)
+item_count = 3
+item_0/text = "New Document"
+item_0/id = 0
+item_1/text = "Open Document"
+item_1/id = 1
+item_2/text = "Save Document"
+item_2/id = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 2
+
+[node name="DocumentTree" type="Tree" parent="HSplitContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="TabContainer" type="TabContainer" parent="HSplitContainer"]
+layout_mode = 2
+
+[node name="RmlDocViewport" parent="HSplitContainer/TabContainer" instance=ExtResource("1_47toy")]
+layout_mode = 2

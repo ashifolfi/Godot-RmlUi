@@ -1,0 +1,19 @@
+<rml>
+	<head>
+		<link type="text/rcss" href="res://rml/rml.rcss"/>
+		<link type="text/rcss" href="res://rml/democontrols.rcss"/>
+	</head>
+	<body>
+		<div class="DemoControls">
+			<button id="prevButton">DEMO_PREVIOUS</button>
+			<div id="demoInfoText">
+				<span>CURDEMO_LINE</span>
+				<span>DEMONAME_3D</span>
+			</div>
+			<button id="nextButton">DEMO_NEXT</button>
+		</div>
+		<div class="DemoControls">
+			<button onclick="print('Hello World!')">Print Hello World</button>
+		</div>
+	</body>
+</rml>

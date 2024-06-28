@@ -1,0 +1,10 @@
+<rml>
+	<head>
+		<title>Hello world</title>
+		<link type="text/rcss" href="res://rml/rml.rcss"/>
+		<link type="text/rcss" href="res://rml/window.rcss"/>
+	</head>
+	<body>
+		<img src="res://icon.svg"></img>
+	</body>
+</rml>

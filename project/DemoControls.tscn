@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://l0glqxkaxbas"]
+
+[ext_resource type="Script" path="res://DemoControls.gd" id="1_6vltw"]
+[ext_resource type="PackedScene" uid="uid://c77a5vu3mmkcw" path="res://scenes/3d_demo.tscn" id="2_uyw7i"]
+[ext_resource type="PackedScene" uid="uid://b4slxhsabt4p7" path="res://scenes/demo_one.tscn" id="3_3e7r0"]
+
+[sub_resource type="GDScript" id="GDScript_38gl0"]
+script/source = "extends Control
+
+func _enter_tree():
+	RmlUIGD.add_font_file(\"res://NotoSans.ttf\")
+"
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_38gl0")
+
+[node name="DemoControls" type="RmlNode" parent="."]
+m_DocumentPath = "res://rml/democontrols.rml"
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6vltw")
+demo_scenes = Array[PackedScene]([ExtResource("2_uyw7i"), ExtResource("3_3e7r0")])

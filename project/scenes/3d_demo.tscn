@@ -1,0 +1,103 @@
+[gd_scene load_steps=11 format=3 uid="uid://c77a5vu3mmkcw"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_526pw"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_g2ewi"]
+sky_material = SubResource("ProceduralSkyMaterial_526pw")
+
+[sub_resource type="Environment" id="Environment_kftuq"]
+background_mode = 2
+sky = SubResource("Sky_g2ewi")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_w0jjm"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_8n7uv"]
+viewport_path = NodePath("SubViewport2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yaiel"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_8n7uv")
+
+[sub_resource type="QuadMesh" id="QuadMesh_ycy7p"]
+size = Vector2(1.5, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_j6ygb"]
+viewport_path = NodePath("SubViewport1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_myjca"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_j6ygb")
+
+[sub_resource type="QuadMesh" id="QuadMesh_1bsjk"]
+
+[node name="3dDemo" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_kftuq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+mesh = SubResource("PlaneMesh_w0jjm")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.998837, 0, 0.0482222, 0, 1, 0, -0.0482222, 0, 0.998837, -0.686301, 0.519547, 0.184203)
+material_override = SubResource("StandardMaterial3D_yaiel")
+mesh = SubResource("QuadMesh_ycy7p")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.583286, 0, -0.812267, 0, 1, 0, 0.812267, 0, 0.583286, 0.867281, 0.519547, 0.582982)
+material_override = SubResource("StandardMaterial3D_myjca")
+mesh = SubResource("QuadMesh_1bsjk")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.961382, 0.0495782, -0.270716, 0, 0.983641, 0.180141, 0.275218, -0.173185, 0.945654, -0.496821, 0.786812, 1.93244)
+
+[node name="SubViewport1" type="SubViewport" parent="."]
+disable_3d = true
+gui_disable_input = true
+gui_embed_subwindows = true
+
+[node name="Control2" type="Control" parent="SubViewport1"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RmlNode" type="RmlNode" parent="SubViewport1/Control2"]
+m_DocumentPath = "res://rml/demodoc.rml"
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport2" type="SubViewport" parent="."]
+disable_3d = true
+gui_disable_input = true
+gui_embed_subwindows = true
+size = Vector2i(1280, 720)
+
+[node name="Control" type="Control" parent="SubViewport2"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RmlNode2" type="RmlNode" parent="SubViewport2/Control"]
+m_DocumentPath = "res://rml/demodoc_two.rml"
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.945519, 0.325568, 0, -0.325568, 0.945519, 0, 1.96138, 0.411188)

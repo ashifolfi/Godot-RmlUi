@@ -1,0 +1,11 @@
+<rml>
+	<head>
+		<link type="text/rcss" href="res://rml/rml.rcss"/>
+		<link type="text/rcss" href="res://rml/window.rcss"/>
+	</head>
+	<body>
+		<h1>RMLUI_NAME</h1>
+		<p>HELLO_WORLD</p>
+		<p>QBF_LINE</p>
+	</body>
+</rml>

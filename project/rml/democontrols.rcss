@@ -1,0 +1,43 @@
+body {
+	font-family: "Noto Sans";
+	font-size: 18px;
+}
+
+.DemoControls {
+	bottom: 0;
+	width: 100%;
+	display: flex;
+}
+
+#prevButton {
+	flex: 1;
+	float: left;
+}
+
+#nextButton {
+	flex: 1;
+	float: right;
+}
+
+#demoInfoText {
+	flex: 3;
+	text-align: center;
+	background-color: #000000;
+}
+
+button {
+	display: inline;
+	background-color: #252525;
+	color: #FFFFFF;
+	padding: 5px;
+	border: 2px #000000;
+	box-sizing: border-box;
+}
+
+button:hover {
+	background-color: #555555;
+}
+
+button:active {
+	background-color: #000000;
+}
