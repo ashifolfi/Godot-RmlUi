@@ -43,7 +43,7 @@ jobs:
         run: sudo apt update && sudo apt install -y ninja-build
 
       - name: Configure CMake
-        run: cmake -G "Ninja" -B "${{env.BUILD_DIR}}" -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_BUILD_TYPE=${{matrix.build_type}}
+        run: cmake -G "Ninja" -B "${{env.BUILD_DIR}}" -DCMAKE_BUILD_TYPE=${{matrix.build_type}}
 
       - name: Build Extensions
         working-directory: '${{env.BUILD_DIR}}'
