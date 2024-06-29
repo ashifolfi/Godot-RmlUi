@@ -1,3 +1,7 @@
+set(GDRML_ADDON_DIR "${CMAKE_CURRENT_SOURCE_DIR}/project/addons/${PROJECT_NAME}")
+set(GDRML_BIN_DIR "${GDRML_ADDON_DIR}/bin")
+set(GDRML_LIB_DIR "${CMAKE_SYSTEM_NAME}_${GDRML_ARCH}")
+
 # Macro to set up many things at once for a given GDExtension
 function(godot_configure_library TARGET)
     # Define DEBUG macro
