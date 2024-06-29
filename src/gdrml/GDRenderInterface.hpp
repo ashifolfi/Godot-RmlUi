@@ -1,7 +1,7 @@
 #pragma once
 
-#include <rmlui/Core/RenderInterface.h>
-#include <rmlui/Core/Types.h>
+#include <RmlUi/Core/RenderInterface.h>
+#include <RmlUi/Core/Types.h>
 #include <godot_cpp/variant/rid.hpp>
 #include <godot_cpp/classes/texture2d.hpp>
 #include <vector>
