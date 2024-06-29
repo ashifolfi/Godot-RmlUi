@@ -1,0 +1,103 @@
+name: Build
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    # nothing here
+
+env:
+  BUILD_DIR: '${{github.workspace}}/build'
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        build_type: [Debug, Release]
+        os:
+          - { id: windows-latest, name: Windows }
+          - { id: ubuntu-latest, name: Linux }
+          - { id: macos-latest, name: macOS }
+    runs-on: ${{matrix.os.id}}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup vcpkg
+        uses: lukka/run-vcpkg@v7.6
+        with:
+          setupOnly: true
+
+      - name: Set up MSVC [Windows]
+        if: matrix.os.id == 'windows-latest'
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+          spectre: true
+
+      - name: Install Dependencies [macOS]
+        if: matrix.os.id == 'macos-latest'
+        run: brew install ninja
+
+      - name: Install Dependencies [Linux]
+        if: matrix.os.id == 'ubuntu-latest'
+        run: sudo apt update && sudo apt install -y ninja-build
+
+      - name: Configure CMake
+        run: cmake -G "Ninja" -B "${{env.BUILD_DIR}}" -DCMAKE_TOOLCHAIN_FILE=${{ github.workspace }}/vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_BUILD_TYPE=${{matrix.build_type}}
+
+      - name: Build Extensions
+        working-directory: '${{env.BUILD_DIR}}'
+        run: cmake --build . --config ${{matrix.build_type}} -t gdrml
+
+      - name: Upload Extensions
+        uses: actions/upload-artifact@v4
+        with:
+          name: 'gdrml_${{matrix.os.name}}_${{matrix.build_type}}'
+          path: |
+            project/addons/
+          retention-days: 7
+
+  merge:
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Artifacts
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const artifacts = (await github.rest.actions.listWorkflowRunArtifacts({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              run_id: ${{github.run_id}},
+            })).data.artifacts;
+            const filteredArtifacts = artifacts.filter(artifact => artifact.name.includes("Release"));
+            console.log(`Found ${artifacts.length} artifacts - ${filteredArtifacts.length} qualify for upload.`);
+            for (const artifact of filteredArtifacts) {
+              console.log(`Downloading "${artifact.name}.zip"...`);
+              let download = await github.rest.actions.downloadArtifact({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                artifact_id: artifact.id,
+                archive_format: 'zip',
+              });
+              let fs = require('fs');
+              fs.writeFileSync(`${{github.workspace}}/${artifact.name}.zip`, Buffer.from(download.data));
+            }
+            console.log("Artifact download complete!");
+
+      - name: Unzip Artifacts
+        run: mkdir dest && unzip -o "${{github.workspace}}/*.zip" -d "${{github.workspace}}/dest"
+
+      - name: Upload Release
+        uses: actions/upload-artifact@v4
+        with:
+          name: gdrml_All_Release
+          path: |
+            dest/*
+          retention-days: 7
