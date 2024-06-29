@@ -26,21 +26,17 @@ A GDExtension port of RmlUi to Godot 4.2+
 
 ### Prerequisites
 - CMake 3.25+
-- vcpkg
 - Godot 4.2+
 - git
 
 ### Windows
 
-#### Visual Studio
-- Clone the project and its submodules
-- Open the directory as a CMake project within Visual Studio
-- Build `godrml.dll`
+#### Visual Studio / CLion
+- Clone the project
+- Open the directory as a CMake project
+- Build `gdrml.dll`
 
-That is all.
-
-#### CLion
-TODO
+It should now build the addon into the test project. Copy addon files to your project/open the test project.
 
 ### macOS
 TODO
