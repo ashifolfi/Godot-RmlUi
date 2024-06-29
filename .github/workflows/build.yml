@@ -27,12 +27,6 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Setup vcpkg
-        uses: lukka/run-vcpkg@v7.6
-        with:
-          setupOnly: true
-          vcpkgGitCommitId: 37ed3467cf6ddc77f440db3945aa7010eb8eed87
-
       - name: Set up MSVC [Windows]
         if: matrix.os.id == 'windows-latest'
         uses: ilammy/msvc-dev-cmd@v1

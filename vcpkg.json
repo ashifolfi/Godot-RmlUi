@@ -1,9 +1,0 @@
-{
-  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
-  "name": "gdrml",
-  "version": "1.0.0",
-  "dependencies": [
-    "rmlui"
-  ],
-  "builtin-baseline": "37ed3467cf6ddc77f440db3945aa7010eb8eed87"
-}
