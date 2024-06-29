@@ -3,6 +3,6 @@ entry_symbol = "${TARGET}_init"
 compatibility_minimum = 4.2
 
 [libraries]
-linux.debug.x86_64 = "res://addons/gdrml/bin/${TARGET}/Linux_x86_64/lib${TARGET}d.so"
-macos.debug = "res://addons/gdrml/bin/${TARGET}/Darwin_Universal/lib${TARGET}d.dylib"
-windows.debug.x86_64 = "res://addons/gdrml/bin/${TARGET}/Windows_AMD64/${TARGET}d.dll"
+linux.debug.x86_64 = "res://addons/godotrmlui/bin/${TARGET}/Linux_x86_64/lib${TARGET}d.so"
+macos.debug = "res://addons/godotrmlui/bin/${TARGET}/Darwin_Universal/lib${TARGET}d.dylib"
+windows.debug.x86_64 = "res://addons/godotrmlui/bin/${TARGET}/Windows_AMD64/${TARGET}d.dll"

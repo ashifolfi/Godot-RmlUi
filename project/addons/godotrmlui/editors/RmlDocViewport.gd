@@ -1,7 +1,7 @@
 @tool
 extends VBoxContainer
 
-const PLUGIN_PATH = "res://addons/gdrml/"
+const PLUGIN_PATH = "res://addons/godotrmlui/"
 @export var Toolbar: HBoxContainer
 
 enum ToolMode

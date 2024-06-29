@@ -11,18 +11,18 @@
 
 using namespace godot;
 
-godrml::RmlUIGD* gd = nullptr;
+gdrml::RmlUIGD* gd = nullptr;
 
 void init_gdrml_module(ModuleInitializationLevel initLevel)
 {
     if (initLevel != MODULE_INITIALIZATION_LEVEL_SCENE)
         return;
 
-	ClassDB::register_internal_class<godrml::RmlUIController>();
-	ClassDB::register_class<godrml::RmlNode>();
-	ClassDB::register_class<godrml::RmlUIGD>();
+	ClassDB::register_internal_class<gdrml::RmlUIController>();
+	ClassDB::register_class<gdrml::RmlNode>();
+	ClassDB::register_class<gdrml::RmlUIGD>();
 
-	gd = memnew(godrml::RmlUIGD);
+	gd = memnew(gdrml::RmlUIGD);
 	Engine::get_singleton()->register_singleton("RmlUIGD", gd);
 
 	if (!ProjectSettings::get_singleton()->has_setting("autoload/RmlUIRoot"))

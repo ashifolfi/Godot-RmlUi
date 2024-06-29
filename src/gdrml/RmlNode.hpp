@@ -19,7 +19,7 @@ class ElementDocument;
 
 }
 
-namespace godrml
+namespace gdrml
 {
 
 class RmlNode : public Control

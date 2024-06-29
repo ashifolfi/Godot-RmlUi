@@ -30,6 +30,5 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-focus_mode = 2
 script = ExtResource("1_6vltw")
 demo_scenes = Array[PackedScene]([ExtResource("2_uyw7i"), ExtResource("3_3e7r0")])

@@ -4,7 +4,7 @@
 #include <Conversion.h>
 #include <godot_cpp/classes/engine.hpp>
 
-using namespace godrml;
+using namespace gdrml;
 
 void RmlUIGD::_bind_methods()
 {

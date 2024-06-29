@@ -5,7 +5,7 @@
 
 #include <Conversion.h>
 
-using namespace godrml;
+using namespace gdrml;
 
 GDScriptEventListener::GDScriptEventListener(Rml::Element* element, const Rml::String& code) : Rml::EventListener()
 {

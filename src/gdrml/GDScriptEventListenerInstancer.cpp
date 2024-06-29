@@ -1,7 +1,7 @@
 #include "GDScriptEventListenerInstancer.hpp"
 #include "GDScriptEventListener.hpp"
 
-using namespace godrml;
+using namespace gdrml;
 
 GDScriptEventListenerInstancer::GDScriptEventListenerInstancer()
 {

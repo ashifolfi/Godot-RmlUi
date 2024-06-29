@@ -8,7 +8,7 @@
 
 #include <RmlUi/Debugger.h>
 
-using namespace godrml;
+using namespace gdrml;
 
 namespace {
 RmlUIController* instance = nullptr;

@@ -2,7 +2,7 @@
 
 #include <RmlUi/Core/SystemInterface.h>
 
-namespace godrml {
+namespace gdrml {
 
 class GDSystemInterface : public Rml::SystemInterface
 {

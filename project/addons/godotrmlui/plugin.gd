@@ -1,7 +1,7 @@
 @tool
 extends EditorPlugin
 
-const PLUGIN_PATH = "res://addons/gdrml/"
+const PLUGIN_PATH = "res://addons/godotrmlui/"
 const MAIN_PANEL = preload(PLUGIN_PATH + "editors/EditorMainView.tscn")
 
 var mainPanelInstance

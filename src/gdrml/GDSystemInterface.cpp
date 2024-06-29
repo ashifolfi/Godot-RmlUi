@@ -7,7 +7,7 @@
 #include <godot_cpp/classes/translation_server.hpp>
 #include <Conversion.h>
 
-using namespace godrml;
+using namespace gdrml;
 using namespace godot;
 
 GDSystemInterface::GDSystemInterface()

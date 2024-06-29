@@ -12,7 +12,7 @@
 
 using namespace godot;
 
-namespace godrml {
+namespace gdrml {
 
 class RmlUIController : public Node
 {

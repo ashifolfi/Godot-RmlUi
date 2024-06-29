@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cheqgktpjscsr"
-path="res://.godot/imported/RmlNodeEditor.png-b4ae8e8b83b9dfdaebab5ecdd2846ccd.ctex"
+path="res://.godot/imported/RmlNodeEditor.png-6778a3260d3e5631ad78c9e6be355246.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/gdrml/assets/icons/RmlNodeEditor.png"
-dest_files=["res://.godot/imported/RmlNodeEditor.png-b4ae8e8b83b9dfdaebab5ecdd2846ccd.ctex"]
+source_file="res://addons/godotrmlui/assets/icons/RmlNodeEditor.png"
+dest_files=["res://.godot/imported/RmlNodeEditor.png-6778a3260d3e5631ad78c9e6be355246.ctex"]
 
 [params]
 

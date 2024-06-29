@@ -8,7 +8,7 @@
 
 using namespace godot;
 
-namespace godrml {
+namespace gdrml {
 
 class GDFileInterface : public Rml::FileInterface
 {

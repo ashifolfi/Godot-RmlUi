@@ -9,7 +9,7 @@
 #include <Conversion.h>
 #include <algorithm>
 
-using namespace godrml;
+using namespace gdrml;
 using namespace godot;
 
 GDRenderInterface::GDRenderInterface()

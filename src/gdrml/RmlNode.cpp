@@ -18,7 +18,7 @@
 
 #include <Conversion.h>
 
-using namespace godrml;
+using namespace gdrml;
 
 Rml::Input::KeyIdentifier GDKeyToRml(Key key)
 {

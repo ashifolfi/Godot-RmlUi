@@ -5,7 +5,7 @@
 
 using namespace godot;
 
-namespace godrml
+namespace gdrml
 {
 
 class GDScriptEventListenerInstancer : public Rml::EventListenerInstancer

@@ -8,6 +8,8 @@ add_library(gdrml SHARED
         "${CMAKE_CURRENT_LIST_DIR}/GDSystemInterface.hpp"
         "${CMAKE_CURRENT_LIST_DIR}/GDFileInterface.cpp"
         "${CMAKE_CURRENT_LIST_DIR}/GDFileInterface.hpp"
+        "${CMAKE_CURRENT_LIST_DIR}/GDFontInterface.cpp"
+        "${CMAKE_CURRENT_LIST_DIR}/GDFontInterface.hpp"
 
         # GDScript Bindings/Support
         "${CMAKE_CURRENT_LIST_DIR}/RmlUIGD.cpp"

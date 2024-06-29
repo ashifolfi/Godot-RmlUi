@@ -5,7 +5,7 @@
 #include <godot_cpp/godot.hpp>
 #include <algorithm>
 
-using namespace godrml;
+using namespace gdrml;
 using namespace godot;
 
 GDFileInterface::GDFileInterface()

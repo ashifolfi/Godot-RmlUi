@@ -4,7 +4,7 @@
 
 using namespace godot;
 
-namespace godrml
+namespace gdrml
 {
 
 class RmlUIGD : public Node

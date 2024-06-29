@@ -17,12 +17,12 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-RmlUIRoot="*res://addons/gdrml/RmlUIRoot.tscn"
 DemoControls="*res://DemoControls.tscn"
+RmlUIRoot="*res://addons/godotrmlui/RmlUIRoot.tscn"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/gdrml/plugin.cfg")
+enabled=PackedStringArray("res://addons/godotrmlui/plugin.cfg")
 
 [internationalization]
 

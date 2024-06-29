@@ -6,7 +6,7 @@
 #include <godot_cpp/classes/texture2d.hpp>
 #include <vector>
 
-namespace godrml {
+namespace gdrml {
 
 class GDRenderInterface : public Rml::RenderInterface
 {
