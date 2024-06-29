@@ -47,7 +47,7 @@ jobs:
 
       - name: Build Extensions
         working-directory: '${{env.BUILD_DIR}}'
-        run: cmake --build . --config ${{matrix.build_type}} -t gdrml
+        run: cmake --build . --config ${{matrix.build_type}} -t godotrmlui
 
       - name: Upload Extensions
         uses: actions/upload-artifact@v4
