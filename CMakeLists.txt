@@ -4,7 +4,7 @@
 if (APPLE)
     set(CMAKE_OSX_ARCHITECTURES "x86_64;arm64" CACHE STRING "" FORCE)
 endif()
-project(gdrml
+project(godotrmlui
         VERSION "0.1.0")
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -59,7 +59,7 @@ add_custom_target(${PROJECT_NAME})
 include("${CMAKE_CURRENT_SOURCE_DIR}/src/_helpers/_helpers.cmake")
 
 # Macro to set up many things at once for a given GDExtension
-function(gdrml_configure_library TARGET)
+function(godot_configure_library TARGET)
     # Define DEBUG macro
     target_compile_definitions(${TARGET} PRIVATE "$<$<CONFIG:Debug>:DEBUG>")
 

@@ -1,4 +1,4 @@
-add_library(godrml SHARED
+add_library(gdrml SHARED
         "${CMAKE_CURRENT_LIST_DIR}/_gdrml.cpp"
         
         # Interfaces
@@ -27,6 +27,6 @@ add_library(godrml SHARED
 # add rmlui library
 find_package(RmlUi REQUIRED)
 
-target_link_libraries(godrml PRIVATE RmlCore RmlDebugger)
+target_link_libraries(gdrml PRIVATE RmlCore RmlDebugger)
 
-gdrml_configure_library(godrml)
+godot_configure_library(gdrml)

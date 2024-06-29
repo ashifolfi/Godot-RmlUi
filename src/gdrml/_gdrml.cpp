@@ -40,7 +40,7 @@ void deinit_gdrml_module(ModuleInitializationLevel initLevel)
 	memdelete(gd);
 }
 
-extern "C" [[maybe_unused]] GDExtensionBool GDE_EXPORT godrml_init(GDExtensionInterfaceGetProcAddress getProcAddress, GDExtensionClassLibraryPtr library, GDExtensionInitialization* initialization) {
+extern "C" [[maybe_unused]] GDExtensionBool GDE_EXPORT gdrml_init(GDExtensionInterfaceGetProcAddress getProcAddress, GDExtensionClassLibraryPtr library, GDExtensionInitialization* initialization) {
 	GDExtensionBinding::InitObject binding{ getProcAddress, library, initialization };
 
 	binding.register_initializer(init_gdrml_module);
