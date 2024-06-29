@@ -27,12 +27,13 @@ A GDExtension port of RmlUi to Godot 4.2+
 ### Prerequisites
 - CMake 3.25+
 - Godot 4.2+
-- git
+- Git
+- Ninja
 
 ### Windows
 
 #### Visual Studio / CLion
-- Clone the project
+- Clone the project via Git (or in your IDE)
 - Open the directory as a CMake project
 - Build `gdrml.dll`
 
